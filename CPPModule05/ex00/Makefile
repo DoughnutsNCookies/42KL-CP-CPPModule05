@@ -15,7 +15,6 @@ CC			=	c++
 RM			=	rm -f
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS_FILES	=	Bureaucrat \
-				Form \
 				main
 SRCS		= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))
 OBJS		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS_FILES)))
