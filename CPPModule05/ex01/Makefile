@@ -6,11 +6,11 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 10:52:13 by schuah            #+#    #+#              #
-#    Updated: 2022/08/30 10:27:21 by schuah           ###   ########.fr        #
+#    Updated: 2022/08/31 11:39:43 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	bureaucrat
+NAME		=	form
 CC			=	c++
 RM			=	rm -f
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic

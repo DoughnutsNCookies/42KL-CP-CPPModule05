@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 15:17:18 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/30 10:57:21 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/31 12:09:06 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &src)
 }
 
 /* Getter function for name of Bureaucrat class */
-const std::string	Bureaucrat::getName()
+const std::string	Bureaucrat::getName() const
 {
 	return (this->_name);
 }
 
 /* Getter function for grade of Bureaucrat class */
-int	Bureaucrat::getGrade()
+int	Bureaucrat::getGrade() const
 {
 	return (this->_grade);
 }
@@ -88,6 +88,21 @@ void	Bureaucrat::becomeDumber()
 		std::cerr << error.what() << std::endl;
 	}
 	this->_grade++;
+}
+
+/* SignForm function, sets signed bool variable to true */
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signs " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+	
 }
 
 /* Exception function for when Grade is too high */
