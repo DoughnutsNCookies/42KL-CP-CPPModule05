@@ -51,7 +51,7 @@ Form	*Intern::makeForm(const std::string formName, const std::string target)
 	{
 		if (formName == availableName[i])
 		{
-			std::cout << "Intern creats " << formName << "Form" << std::endl;
+			std::cout << "Intern creates " << formName << "Form" << std::endl;
 			selectedForm = availableForm[i];
 		}
 		else
