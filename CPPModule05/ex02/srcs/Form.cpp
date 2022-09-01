@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 10:32:59 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/30 22:20:19 by schuah           ###   ########.fr       */
+/*   Updated: 2022/09/01 12:32:13 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Form::Form(const Form &src) :
 	_name(src._name), _signGrade(src._signGrade), _executeGrade(src._executeGrade)
 {
 	this->_signed = src._signed;
+	*this = src;
 }
 
 /* Constructor function for (string, int, int) input of Form class */
